@@ -4,18 +4,19 @@
 # TODO: you must additionally install nVidia drivers, eg. on Ubuntu linux 
 # `apt install nvidia-driver-440` (change the 440 for whatever version you need/have).
 #
-name: yolact-env
+name: yolact-env2
 #prefix: /your/custom/path/envs/yolact-env
 channels:
   - conda-forge
   - pytorch
   - defaults
 dependencies:
-  - python==3.7
+  - python==3.9.12
   - pip
   - cython 
-  - pytorch::torchvision
-  - pytorch::pytorch >=1.0.1
+  - pytorch::torchvision==0.13.0+cu116
+  - pytorch::torchaudio==0.12.0
+  - pytorch::torch==1.12.0+cu116
   - cudatoolkit
   - cudnn
   - pytorch::cuda100
